@@ -3,14 +3,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <link rel="stylesheet" href="style.css">
-
+        <link rel="stylesheet" href="style_main.css">
+        <link rel="stylesheet" href="style_index.css">
+        <script src="test.js" defer></script>
     <style>
         /* #grad1 {
             height: 300px;
             background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(0, 0, 0)); */
             
-        }; 
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;561;600;700&display=swap');
         
     </style>
@@ -27,33 +27,53 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="aboutme.html">ABOUT ME</a></li>
                 <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="skills.html">SKILLS</a></li>
             </ul>
         </div>
     </nav>
+    <div class="button">
+        <button onclick="myFunction()">Toggle dark mode</button>
+    </div>
+
+    <!-- <div>
+        <input type="checkbox" class="checkbox" id="checkbox">
+      <label for="checkbox" class="label">
+        <i class="fas fa-moon"></i>
+        <i class='fas fa-sun'></i>
+        <div class='ball'>
+      </label>
+    </div> -->
     
 <div class="grad"></div>
 
-<div>
-<center>
-<img src="images\v2.png" alt="Italian Trulli">
-</center>
+<div class="box">
+    <div style="line-height:300%;">
+        <br>
+<!-- <img src="images\mapfix\background.png" id="index"></img> -->
+
+  <div class="parent" id="shadow">
+    <img class="imagebackground" src="images\map\background.png"/>
+    <a href="aboutme.html">
+        <img class="imageaboutme shadowfilter" src="images\mapfix\aboutme.png" />
+    </a>
+    <a href="education.html">
+        <img class="imageeducation shadowfilter" src="images\mapfix\education.png" />
+    </a>
+    <a href="experience.html">
+        <img class="imageexperience shadowfilter" src="images\mapfix\experience.png" />
+    </a>
+    <a href="projects.html">
+        <img class="imageprojects shadowfilter" src="images\mapfix\projects.png" />
+    </a>
+    <a href="skills.html">
+        <img class="imageskills shadowfilter" src="images\mapfix\skills.png" />
+    </a>
+  </div>
 </div>
+  
 
-
-<div class="text-box">
-    <div style="line-height:100%;">
-    </div>
-
-    <h1>Portfolio</h1>
-    <p> lalalalalalalal </p>
-    <br> </br>
-    <a href="" class="art-button"> test button for art </a>
-</div>
 </section>
-
-
-
 </body>
 </html>

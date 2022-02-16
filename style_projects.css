@@ -38,9 +38,10 @@
 	 text-align: center;
 	 top: calc(0% - 2em);
 	 color: white;
-	 background: rgba(0, 0, 0, 0.5);
+	 background: rgba(0, 0, 0, 0.8);
 	 font-size: 1.5em;
 	 transform: rotate(0deg) skew(-5deg);
+   transform: scaleX(0.97);
 }
  .container .card img {
 	 width: 100%;
