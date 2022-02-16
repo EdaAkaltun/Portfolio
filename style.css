@@ -120,7 +120,7 @@ img.green:hover{
 
 .box{
      /* margin-inline: 300px; */
-     width: 1000px;
+     width: 1300px;
      padding: 60px;
      border: 10px, rgb(255, 255, 255);
      color: rgb(255, 255, 255);
@@ -142,8 +142,8 @@ img.green:hover{
     
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
     .box {
-      width: 30%;
+      width: 50%;
     }
   }
