@@ -31,13 +31,13 @@
 #icondark{
     width: 30px;
     cursor: pointer;
-    margin-right: 8%;
+    margin-right: 4%;
 }
 
 .nav-container{
     width: 100%;
     /* navbar background color */
-    background-color: var(--primary-color-header)
+    background-color: var(--primary-color)
 }
 
 
@@ -45,7 +45,7 @@
     /* display: grid; */
     /* grid-template-columns: 0.2fr auto 1fr; */
     height: 70px;
-    max-width: 2000px;
+    max-width: 1500px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -74,7 +74,7 @@
     width: 80%;
     float: right;
     justify-content: right;
-    margin-right: 0%
+    margin-right: 2%
 }
 
 .nav-links {
@@ -108,7 +108,7 @@
     }
 
     #icondark{
-        margin-right: 18%;
+        margin-right: 15%;
     }
     
     .nav-menu{
@@ -197,7 +197,7 @@
 }
 
 .social-links a{
-    font-size: 20px;
+    font-size: 22px;
     color: var(--text-color);
     margin-right: 20px;
     text-decoration: none;
@@ -225,4 +225,50 @@
     color: rgb(255, 255, 255, 0.6);
   }
 
-  .inf_line {width: 100%; height: 1px; background-color: #333; margin: 10px;}
+  .inf_line {width: 100%; height: 1px; background-color: var(--text-color); margin: 10px;}
+
+
+
+.textbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px 40px 40px;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    color: var(--text-color)
+}
+.textbox_image {
+    margin: 40px 40px 0 0;
+    width: 250px;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+.textbox_image_logos {
+    margin: 40px 40px 0 0;
+    width: 120px;
+    object-fit: contain;
+    align-self: flex-start;
+}
+.textbox_text {
+    flex: 1 1 auto;
+}
+
+br {
+    display: block;
+
+    line-height: 12px;
+  }
+
+.footerweb {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: var(--primary-color);
+color: var(--text-color);
+text-align: center;
+}

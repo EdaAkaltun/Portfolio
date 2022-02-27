@@ -7,7 +7,14 @@
         <link rel="stylesheet" href="loading.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
-
+    <style>
+        body {
+          height: 1100px; /* Make this site really long */
+          /* overflow-y: hidden; */
+          overflow-x: hidden;
+          overflow-y: scroll;
+        }
+    </style>
 <body>
 
     <div class="background">
@@ -21,31 +28,31 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#" class="nav-links">HOME</a></li>
-                <li><a href="#" class="nav-links">ABOUT ME</a></li>
-                <li><a href="#" class="nav-links">EDUCTATION</a></li>
-                <li><a href="#" class="nav-links">EXPERIENCE</a></li>
-                <li><a href="#" class="nav-links">PROJECTS</a></li>
-                <li><a href="#" class="nav-links">SKILLS</a></li>
-                <li><a href="#" class="nav-links">CONTACT</a></li>
+                <li><a href="index.html" class="nav-links">HOME</a></li>
+                <li><a href="aboutme.html" class="nav-links">ABOUT ME</a></li>
+                <li><a href="education.html" class="nav-links">EDUCATION</a></li>
+                <li><a href="experience.html" class="nav-links">EXPERIENCE</a></li>
+                <li><a href="projects.html" class="nav-links">PROJECTS</a></li>
+                <li><a href="skills.html" class="nav-links">SKILLS</a></li>
+                <li><a href="contact.html" class="nav-links">CONTACT</a></li>
             </ul>
-            <i class="fa-solid fa-moon fa-bounce fa-2xl " id="icondark" style="--fa-animation-iteration-count: 5;" ></i>
+            <!-- <i class="fa-solid fa-moon fa-bounce fa-2xl " id="icondark" style="--fa-animation-iteration-count: 5;" ></i> -->
+            <img src="images/moon.png" id="icondark"> 
         </nav>
+        <div class="inf_line">
+            &nbsp;
+            </div>
     </div>
-        <script src="script.js"></script>
+        <script src="navbar.js"></script>
 
 
+    <div class="imagecenter"> <img src="images\frontpage.png" width= 2000px"> </img> <div class="centered">PLACEHOLDER</div></div>
 
-    <div class="inf_line">
-        &nbsp;
-        </div>
-    <div class="imagecenter"> <img src="images\projecten\ON6\fdsafdsafafs.png" height="1000px"> </img> <div class="centered">PLACEHOLDER</div></div>
-    <div class="inf_line">
-        &nbsp;
-        </div>
+            <div class="social-links footerweb">
+                <div class="inf_line">
+                    &nbsp;
+                </div>
 
-        <footer>
-            <div class="social-links" >
                 <a href="https://www.linkedin.com/in/edaakaltun/">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
@@ -54,56 +61,18 @@
                     <i class="fa-brands fa-github"></i>
                 </a>
     
-                <a href="https://steamcommunity.com/id/DieEdster">
-                    <i class="fa-brands fa-steam"></i>
+                <a href="https://www.flickr.com/people/142242166@N08/">
+                    <i class="fa-brands fa-flickr"></i>
                 </a>
     
-                <a href="https://www.instagram.com/e.akaltun/">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-    
-                <a href="x">
+                <a href="https://www.behance.net/edaakaltun">
                     <i class="fa-brands fa-behance"></i>
                 </a>
-            </footer>
-        </div>
-
-
-
     
     </div>
 
-<script>
-    var icon = document.getElementById("icondark");
+<script src="darkmode.js"></script>
 
-    // if (localStorage.getItem("theme") == null){
-    //     localStorage.setItem("theme", "light");
-    // }
-
-    // let localData = localStorage.getItem("theme");
-
-    // if(localData == "light"){
-    //     icon.src = "images/moon.png";
-    //     document.body.classlist.remove("dark-theme");
-    // }
-    // else if(localData == "dark"){
-    //     icon.src = "images/sun.png";
-    //     document.body.classlist.add("dark-theme");
-    https://www.youtube.com/watch?v=2j_kBqpFK-g&t=0s
-    // }
-
-    icon.onclick = function(){
-
-        document.body.classList.toggle("dark-theme");
-        if(document.body.classList.contains("dark-theme")){
-            icon.src = "images/moon.png";
-            localStorage.setItem("theme", "dark");
-        }else{
-            icon.src = "images/sun.png";
-            localStorage.setItem("theme", "light");
-        }
-    }
-</script>
 </body>
 </html>
 
