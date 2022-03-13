@@ -8,7 +8,7 @@
 :root{
     --primary-color: rgb(255, 255, 255); 
     --primary-color-header: rgb(226, 226, 226);
-    --secondary-color: rgb(26, 155, 172);
+    --secondary-color: rgb(218, 206, 206);
     --text-color: rgb(0, 0, 0);
 }
 
@@ -16,7 +16,7 @@
 .dark-theme{
     --primary-color: rgb(32, 32, 32); 
     --primary-color-header: rgb(32, 32, 32);
-    --secondary-color: rgb(33, 222, 247);
+    --secondary-color: rgb(156, 145, 145);
     --text-color: rgb(255, 255, 255);    
 }
 
@@ -44,21 +44,23 @@
 .navbar{
     /* display: grid; */
     /* grid-template-columns: 0.2fr auto 1fr; */
-    height: 70px;
-    max-width: 1800px;
+    height: 60px;
+    max-width: 1500px;
     margin: auto;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
     margin: 0 auto;
+    font-size: 14px;
 }
 
 #navbar-logo{
     /* justify-self: start; */
     justify-content: left;
-    margin-left: 10%;
+    margin-left: 40px;
     width: 50px;
+    box-shadow: inset 0 0 100px rgb(228, 228, 228)
 
 }
 
@@ -77,19 +79,32 @@
     margin-right: 2%
 }
 
+.nav-menu li{
+    margin-inline: 20px;
+}
+
 .nav-links {
     /* nav links text color */
     color: var(--text-color);
     text-decoration: none;
-    padding-inline: 20px;
-    text-align: center;
-    align-content: center;
 }
 
-.nav-links:hover {
+
+.nav-links::after{
+    content: '';
+    width: 10%;
+    height: 2px;
+    background: var(--text-color);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links:hover::after {
     /* hover color */
-    color: var(--secondary-color);
     transition: all 0.2s ease-out;
+    width: 100%;
+    color: var(--secondary-color);
 }
 
 
@@ -102,34 +117,33 @@
     background: var(--text-color);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1100px) {
     .nav-container{
         position: relative;
     }
 
     #icondark{
-        margin-right: 10%;
+        margin-right: 12%;
+        margin-top: 1.5%;
     }
     
-    .langWrap{
- 
-    }
 
 
     .nav-menu{
         justify-content: center;
         display: grid;
         grid-template-columns: auto;
-        list-style: none;
-        text-align: center;
-        justify-self: end;
+        /* list-style: none; */
+        /* text-align: center;
+        justify-self: end; */
         background: var(--primary-color-header);
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 60px;
         opacity: 0;
         transition: all 0.5s ease;
+        left: -100%;
 
     }
 
@@ -142,6 +156,8 @@
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
+        /* position: absolute; */
+        z-index: 100;
     }
 
     .nav-links{
@@ -152,10 +168,9 @@
     }
 
     .nav-links:hover {
-
         background-color: var(--secondary-color);
         color: white;
-
+        width: 100%;
         transition: all 0.4s ease-out;
 
     }
@@ -194,6 +209,128 @@
     }
 }
 
+.imagecenter{
+    text-align: center;  
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: rgb(255, 255, 255, 0.6);
+  }
+
+  .inf_line {width: 100%; height: 1px; background-color: var(--text-color); margin: 5px;}
+
+/* ================================== ABOUT ME================================== */
+
+.abouttextbox{
+    position: relative;
+    left: 50%;
+    transform: translatex( -50%);
+    max-width: 1000px;
+    padding: 20px 40px 40px;
+    color: var(--text-color);
+    height: 700px;
+    font-size: 12px;
+}
+
+.abouttextbox img{ 
+    position: absolute;
+    margin: 40px, 0px;
+    width: 25%;
+    object-fit: contain;
+}
+
+.abouttextbox p {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+.abouttextbox h2 {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    transform: translateY(-100%);
+    max-width: 70%;
+}
+
+  /* ================================== TEXTBOXES EDU AND EXP================================== */
+
+.text {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 12px;
+}
+
+.text h1{
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+.textbox{
+    position: relative;
+    left: 50%;
+    transform: translatex( -50%);
+    max-width: 1100px;
+    padding: 20px 40px 40px;
+    color: var(--text-color);
+    height: 200px;
+    font-size: 12px;
+}
+
+.textbox img{ 
+    position: absolute;
+    margin: 40px, 10px;
+    width: 15%;
+    object-fit: contain;
+}
+
+.textbox p {
+    position: absolute;
+    left: 30%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 70%;
+}
+
+.textbox h2 {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    text-decoration: bold;
+    transform: translateY(-50%);
+    max-width: 70%;
+}
+
+
+br {
+    display: block;
+    line-height: 12px;
+  }
+
+/* ================================== FOOTER ========================================= */
+
+.footerweb {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
 .social-links{
     margin-top: 10px;
     bottom: 0;
@@ -202,7 +339,7 @@
 }
 
 .social-links a{
-    font-size: 22px;
+    font-size: 16px;
     color: var(--text-color);
     margin-right: 20px;
     text-decoration: none;
@@ -217,73 +354,14 @@
     color: var(--text-color);
 }
 
-.imagecenter{
-    text-align: center;  
-}
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 200px;
-    color: rgb(255, 255, 255, 0.6);
-  }
-
-  .inf_line {width: 100%; height: 1px; background-color: var(--text-color); margin: 10px;}
-
-
-
-.textbox {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: 20px 40px 40px;
-    max-width: 1000px;
-    display: flex;
-    align-items: center;
-    color: var(--text-color)
-}
-.textbox_image {
-    margin: 40px 40px 0 0;
-    width: 250px;
-    object-fit: contain;
-    align-self: flex-start;
-}
-
-.textbox_image_logos {
-    margin: 40px 40px 0 0;
-    width: 120px;
-    object-fit: contain;
-    align-self: flex-start;
-}
-.textbox_text {
-    flex: 1 1 auto;
-}
-
-br {
-    display: block;
-
-    line-height: 12px;
-  }
-
-.footerweb {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: var(--primary-color);
-color: var(--text-color);
-text-align: center;
-}
-
+/* ================================== LANGUAGE CHANGE ========================================= */
 .langWrap{
     cursor: pointer;
     margin-right: 3%; 
     display: flex;
     text-indent: 10px;
     color: var(--text-color);
+    justify-content: center;
 }
 
 c{
@@ -292,8 +370,31 @@ c{
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
+    padding-inline: 10px;
+    
   }
   
   c.active{
     color: var(--secondary-color);
   }
+
+  .overflowcontainer{
+    position: relative;
+    overflow-y: auto;
+    overflow-x:hidden;
+    height: 100%;
+    /* height: 65vh; */
+    scrollbar-color: var(--text-color) var(--primary-color);
+    scrollbar-width: thin;
+    
+  }
+
+  .overflowcontainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflowcontainer {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
