@@ -12,16 +12,18 @@ body{
 :root{
     --primary-color: rgb(255, 255, 255); 
     --primary-color-header: rgb(226, 226, 226);
-    --secondary-color: rgb(26, 155, 172);
+    --secondary-color: rgb(218, 206, 206);
     --text-color: rgb(0, 0, 0);
+   
 }
 
 
 .dark-theme{
     --primary-color: rgb(32, 32, 32); 
     --primary-color-header: rgb(32, 32, 32);
-    --secondary-color: rgb(33, 222, 247);
-    --text-color: rgb(255, 255, 255);    
+    --secondary-color: rgb(156, 145, 145);
+    --text-color: rgb(255, 255, 255);  
+   
 }
 
 .background{
@@ -48,21 +50,23 @@ body{
 .navbar{
     /* display: grid; */
     /* grid-template-columns: 0.2fr auto 1fr; */
-    height: 70px;
-    max-width: 1800px;
+    height: 60px;
+    max-width: 1500px;
     margin: auto;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
     margin: 0 auto;
+    font-size: 14px;
 }
 
 #navbar-logo{
     /* justify-self: start; */
     justify-content: left;
-    margin-left: 10%;
+    margin-left: 40px;
     width: 50px;
+    box-shadow: inset 0 0 100px rgb(228, 228, 228)
 
 }
 
@@ -81,19 +85,32 @@ body{
     margin-right: 2%
 }
 
+.nav-menu li{
+    margin-inline: 20px;
+}
+
 .nav-links {
     /* nav links text color */
     color: var(--text-color);
     text-decoration: none;
-    padding-inline: 20px;
-    text-align: center;
-    align-content: center;
 }
 
-.nav-links:hover {
+
+.nav-links::after{
+    content: '';
+    width: 10%;
+    height: 2px;
+    background: var(--text-color);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links:hover::after {
     /* hover color */
-    color: var(--secondary-color);
     transition: all 0.2s ease-out;
+    width: 100%;
+    color: var(--secondary-color);
 }
 
 
@@ -106,13 +123,14 @@ body{
     background: var(--text-color);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1100px) {
     .nav-container{
         position: relative;
     }
 
     #icondark{
-        margin-right: 10%;
+        margin-right: 12%;
+        margin-top: 1.5%;
     }
     
 
@@ -129,10 +147,14 @@ body{
         margin: 0;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 60px;
         opacity: 0;
         transition: all 0.5s ease;
+<<<<<<< HEAD
+        left: -100%;
+=======
         /* left: -100%; */
+>>>>>>> dac4fec711db75fd67c1181630853f477e20b94f
 
     }
 
@@ -146,6 +168,10 @@ body{
         opacity: 1;
         transition: all 0.5s ease;
         /* position: absolute; */
+<<<<<<< HEAD
+        z-index: 100;
+=======
+>>>>>>> dac4fec711db75fd67c1181630853f477e20b94f
     }
 
     .nav-links{
@@ -197,29 +223,6 @@ body{
     }
 }
 
-.social-links{
-    margin-top: 10px;
-    bottom: 0;
-    text-align: center;
-
-}
-
-.social-links a{
-    font-size: 22px;
-    color: var(--text-color);
-    margin-right: 20px;
-    text-decoration: none;
-}
-
-.social-links a:hover{
-    color: var(--secondary-color);
-}
-
-.fa-solid{
-    padding-left: 100px;
-    color: var(--text-color);
-}
-
 .imagecenter{
     text-align: center;  
 }
@@ -233,16 +236,85 @@ body{
     color: rgb(255, 255, 255, 0.6);
   }
 
+<<<<<<< HEAD
+  .inf_line {width: 100%; height: 1px; background-color: var(--text-color); margin: 5px;}
+=======
   .inf_line {width: 100%; height: 1.5px; background-color: var(--text-color); margin: 5px;}
+>>>>>>> dac4fec711db75fd67c1181630853f477e20b94f
 
+/* ================================== ABOUT ME================================== */
 
-
-.textbox {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+.abouttextbox{
+    position: relative;
+    left: 50%;
+    transform: translatex( -50%);
+    max-width: 1000px;
     padding: 20px 40px 40px;
+    color: var(--text-color);
+    height: 700px;
+    font-size: 12px;
+}
+
+.abouttextbox img{ 
+    position: absolute;
+    margin: 40px, 0px;
+    width: 25%;
+    object-fit: contain;
+}
+
+.abouttextbox p {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateY(-20%);
+    width: 50%;
+    padding-right: 30px;
+    
+}
+
+.abouttextbox h2 {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    transform: translateY(-100%);
+    max-width: 70%;
+    padding-right: 20px;
+}
+
+  /* ================================== TEXTBOXES EDU AND EXP================================== */
+
+.text {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 12px;
+}
+
+.text h1{
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+.textbox{
+    position: relative;
+    left: 50%;
+    transform: translatex( -50%);
+    max-width: 1100px;
+    padding: 20px 40px 40px;
+<<<<<<< HEAD
+    color: var(--text-color);
+    height: 200px;
+    font-size: 12px;
+}
+
+.textbox img{ 
+    position: absolute;
+    margin: 40px, 10px;
+    width: 15%;
+=======
     max-width: 1000px;
     display: flex;
     align-items: center;
@@ -252,26 +324,41 @@ body{
     margin: 40px 40px 0 0;
     width: 250px;
     max-width: 30%;
+>>>>>>> dac4fec711db75fd67c1181630853f477e20b94f
     object-fit: contain;
-    align-self: flex-start;
 }
 
-.textbox_image_logos {
-    margin: 40px 40px 0 0;
-    width: 120px;
-    object-fit: contain;
-    align-self: flex-start;
+.textbox p {
+    position: absolute;
+    left: 30%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 70%;
+    padding-right: 30px;
 }
 
+<<<<<<< HEAD
+.textbox h2 {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    text-decoration: bold;
+    transform: translateY(-50%);
+    max-width: 70%;
+    padding-right: 20px;
+=======
 .textbox_text {
     flex: 1 1 auto;
+>>>>>>> dac4fec711db75fd67c1181630853f477e20b94f
 }
+
 
 br {
     display: block;
-
     line-height: 12px;
   }
+
+/* ================================== FOOTER ========================================= */
 
 .footerweb {
     position: fixed;
@@ -282,8 +369,35 @@ br {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
+<<<<<<< HEAD
 }
 
+.social-links{
+    margin-top: 10px;
+    bottom: 0;
+    text-align: center;
+
+}
+
+.social-links a{
+    font-size: 16px;
+    color: var(--text-color);
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.social-links a:hover{
+    color: var(--secondary-color);
+}
+
+.fa-solid{
+    padding-left: 100px;
+    color: var(--text-color);
+=======
+>>>>>>> dac4fec711db75fd67c1181630853f477e20b94f
+}
+
+/* ================================== LANGUAGE CHANGE ========================================= */
 .langWrap{
     cursor: pointer;
     margin-right: 3%; 
@@ -305,4 +419,89 @@ c{
   
   c.active{
     color: var(--secondary-color);
+  }
+
+  .overflowcontainer{
+    position: relative;
+    overflow-y: auto;
+    overflow-x:hidden;
+    height: 100%;
+    /* height: 65vh; */
+    scrollbar-color: var(--text-color) var(--primary-color);
+    scrollbar-width: thin;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .overflowcontainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+.overflowcontainer_home{
+    position: relative;
+    overflow-y: auto;
+    overflow-x:auto;
+    height: 100%;
+    /* height: 65vh; */
+    scrollbar-color: var(--text-color) var(--primary-color);
+    scrollbar-width: thin;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.overflowcontainer_home_AboutMe{
+    position: absolute;
+    z-index: 1;
+    top: 545px;
+    left: 780px;
+    filter: grayscale();
+}
+
+.overflowcontainer_home_Education{
+    position: absolute;
+    z-index: 1;
+    top: 450px;
+    left: 470px;
+    filter: grayscale();
+}
+
+.overflowcontainer_home_Skills{
+    position: absolute;
+    z-index: 1;
+    top: 495px;
+    left: 190px;
+    filter: grayscale();
+}
+
+.overflowcontainer_home_Projects{
+    position: absolute;
+    z-index: 1;
+    top: 497px;
+    left: 945px;
+    filter: grayscale();
+}
+
+.overflowcontainer_home_Experience{
+    position: absolute;
+    z-index: 1;
+    top: 235px;
+    left: 1396px;
+    filter: grayscale(10);
+}
+
+.shadowfilter {
+    -webkit-filter: drop-shadow(0px 0px 0px rgb(108, 182, 74));
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.5s linear;
+    
+  }
+  .shadowfilter:hover {
+    -webkit-filter: drop-shadow(0px 0px 20px rgb(156, 184, 79));
+    z-index: 2;
   }
