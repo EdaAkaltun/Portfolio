@@ -1,5 +1,5 @@
 
-    var icon = document.getElementById("icondark");
+var icon = document.getElementById("icondark");
 
     if(localStorage.getItem("theme") == null){
         localStorage.setItem("theme", "light");
