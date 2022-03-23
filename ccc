@@ -1,0 +1,17 @@
+.overflowcontainer_home{
+    /* position: relative; */
+    overflow-y: auto;
+    overflow-x:auto;
+    height: 90vh;
+    width: 100vw;
+    /* height: 65vh; */
+    scrollbar-color: var(--text-color) var(--primary-color);
+    scrollbar-width: thin;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+}

@@ -1,101 +1,61 @@
-/*-----------------*/
-/***** Winston *****/
-/*-----------------*/
 
-figure.effect-winston {
-	background: #162633;
-	text-align: left;
+/* ============================================================================ */
+
+body{
+	text-align: center;
 }
-
-figure.effect-winston img {
-	-webkit-transition: opacity 0.45s;
-	transition: opacity 0.45s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+[type="radio"]{
+  display: none;
 }
-
-figure.effect-winston figcaption::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url(../img/triangle.svg) no-repeat center center;
-	background-size: 100% 100%;
-	content: '';
-	-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
-	transition: opacity 0.45s, transform 0.45s;
-	-webkit-transform: rotate3d(0,0,1,45deg);
-	transform: rotate3d(0,0,1,45deg);
-	-webkit-transform-origin: 0 100%;
-	transform-origin: 0 100%;
+label{
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.25s;
+  color: var(--text-color);
 }
-
-figure.effect-winston h2 {
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(0,20px,0);
-	transform: translate3d(0,20px,0);
+[type="radio"]:checked + label{
+	background: var(--secondary-color);
 }
-
-figure.effect-winston p {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 0 1.5em 7% 0;
+[type="radio"]:nth-of-type(2):checked ~ .gallery .card:not(.Software),
+[type="radio"]:nth-of-type(4):checked ~ .gallery .card:not(.Language),
+[type="radio"]:nth-of-type(3):checked ~ .gallery .card:not(.Coding),
+[type="radio"]:nth-of-type(5):checked ~ .gallery .card:not(.Etc)
+{
+  display: none;
 }
-
-figure.effect-winston a {
-	margin: 0 10px;
-	color: #5d504f;
-	font-size: 170%;
+.gallery{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 160px);
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  
 }
-
-figure.effect-winston a:hover,
-figure.effect-winston a:focus {
-	color: #cc6055;
+.card{
+  margin: 0;
+  background: var(--secondary-color);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  
 }
-
-figure.effect-winston p a i {
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(0,50px,0);
-	transform: translate3d(0,50px,0);
+.card:hover{
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  /* cursor: pointer; */
+  opacity: 0.5;
+  
 }
-
-figure.effect-winston:hover img {
-	opacity: 0.6;
+.card__image{
+  width: 100%;
+  object-fit: cover;
 }
-
-figure.effect-winston:hover h2 {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-figure.effect-winston:hover figcaption::before {
-	opacity: 0.7;
-	-webkit-transform: rotate3d(0,0,1,20deg);
-	transform: rotate3d(0,0,1,20deg);
-}
-
-figure.effect-winston:hover p i {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-figure.effect-winston:hover p a:nth-child(3) i {
-	-webkit-transition-delay: 0.05s;
-	transition-delay: 0.05s;
-}
-
-figure.effect-winston:hover p a:nth-child(2) i {
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
-}
-
-figure.effect-winston:hover p a:first-child i {
-	-webkit-transition-delay: 0.15s;
-	transition-delay: 0.15s;
+.card__caption{
+	font-weight: bold;
+  font-variant: small-caps;
+  padding: 0.5rem;
+  padding-bottom: 0px;
+  text-align: center;
+  color: var(--text-color);
 }
