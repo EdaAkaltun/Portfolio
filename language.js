@@ -35,7 +35,7 @@ var data = {
 	  {
 		"title": "Hakkımda",
 		"description": 
-			" kebab kebab kebab go brrr"
+			" Maybe if i feel like"
 	  }
 	}
 
