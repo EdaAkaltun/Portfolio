@@ -344,6 +344,7 @@ br {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
+    z-index: 10;
 }
 
 .social-links {
@@ -406,8 +407,8 @@ c.active {
 .overflowcontainer_nonhome{
     position: relative;
     overflow-y: auto;
-    overflow-x:hidden;
-    height: 80%;
+    overflow-x: auto;
+    height: 100%;
     /* height: 65vh; */
     scrollbar-color: var(--text-color) var(--primary-color);
     scrollbar-width: thin;
@@ -517,8 +518,9 @@ c.active {
 }
 
 .shadowfilter:hover {
-    filter: drop-shadow(0px 0px 10px rgb(170, 228, 103));
-    z-index: 2;
+    filter: drop-shadow(0px 0px 10px rgb(97, 182, 0));
+    filter: drop-shadow(0px 0px 10px rgb(161, 255, 55));
+    z-index: 4;
 }
 /*
 @media screen and (max-width:1680px) {
@@ -537,7 +539,8 @@ c.active {
 */
 .dark-theme .shadowfilter:hover{
     filter: drop-shadow(0px 0px 10px rgb(181, 255, 230));
-    z-index: 10;
+    filter: drop-shadow(0px 0px 10px rgb(181, 255, 230));
+    z-index: 4;
 }
 
 .dark-theme .overflowcontainer_home #zindex0 {
