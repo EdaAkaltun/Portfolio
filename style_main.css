@@ -407,7 +407,7 @@ c.active {
     position: relative;
     overflow-y: auto;
     overflow-x:hidden;
-    height: 100%;
+    height: 80%;
     /* height: 65vh; */
     scrollbar-color: var(--text-color) var(--primary-color);
     scrollbar-width: thin;
