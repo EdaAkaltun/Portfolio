@@ -38,7 +38,11 @@
             </div>
         </div>
         <script src="navbar.js"></script>
+
+
+
         <div class="overflowcontainer_nonhome">
+
             <div class="overflowcentered">
                 <div class="overflowcontainer_home"> <img id="zindex0" src="images\indexmap\background.png">
                     <a href="aboutme.html"> <img class="overflowcontainer_home_AboutMe shadowfilter"
@@ -52,8 +56,49 @@
                     <a href="skills.html"> <img class="overflowcontainer_home_Skills shadowfilter"
                             src="images\indexmap\skills.png"></a>
                 </div>
+
+                <div class="Modal" id="Modal_gone">
+                    <div class="triangle"></div>
+                <div class="cross" onclick="document.getElementById('Modal_gone').style.display='none'"> x </div>
+                    <p class="Modal-InText">
+                        Click me!
+                    </p>
+                </div>
+                
+
             </div>
+
+
         </div>
+
+        <img class="scroll_down_arrow" id="scroll_down_arrow" src="images/scroll-down.gif" alt="scroll down"></img>
+        <img class="scroll_down_arrow" id="scroll_down_arrow_flip" src="images/scroll-down.gif" alt="scroll down"></img>
+
+
+        <!-- <script src="jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            function arrowshow(){
+              var wh=$(window).width();
+              var htmlh=$("html,body").width();
+              var scrh=$("html,body").scrollLeft();
+              //alert ("wh="+wh+" htmlh="+htmlh +" scrh="+scrh+"
+          hide="+((wh+scrh)>=(htmlh-30))";
+              if ((wh+scrh)>=(htmlh-20)) {
+                $(".scroll_down_arrow").hide();
+              } else {
+                $(".scroll_down_arrow").show();
+              }
+            }
+            $(window).scroll(function(){
+              arrowshow();
+            });
+            $(window).resize(function(){
+              arrowshow();
+            });
+            arrowshow();
+          });
+        </script> -->
 
         <!-- <div class="overflowcontainer_home"> <img src="images\indexmap\126371014 copy.png"> </img>
     <img class="overflowcontainer_home_AboutMe shadowfilter" src="images\indexmap\about me copy.png" id="img_about">
@@ -62,9 +107,6 @@
     <img class="overflowcontainer_home_Projects shadowfilter" src="images\indexmap\projects copy.png" id="img_projects">
     <img class="overflowcontainer_home_Skills shadowfilter" src="images\indexmap\skills copy.png" id="img_skills">
 </div> -->
-
-
-
 
         <div class="social-links footerweb">
             <div class="inf_line">
@@ -93,7 +135,10 @@
 
         <script src="darkmodemap.js"></script>
     </div>
-    
+
+
+
+
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function () {
