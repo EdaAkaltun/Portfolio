@@ -8,6 +8,7 @@ form {
   border-radius: 20px;
   position: relative;
   z-index: 1;
+  max-width: 1400px;
 }
 
 form>div {
@@ -20,6 +21,7 @@ form>div {
   border: 0px solid #ccc;
   border-radius: 20px;
   text-align: center;
+  max-width: 1400px;
 }
 
 form>div>img {
@@ -37,6 +39,7 @@ form>textarea {
   border-radius: 4px;
   display: block;
   width: 70vw;
+  max-width: 1200px;
 }
 
 form>textarea {

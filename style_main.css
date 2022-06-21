@@ -35,12 +35,12 @@
     filter: brightness(00);
 }
 
-#scroll_down_arrow_flip { 
+#scroll_down_arrow_flip {
     transform: rotate(90deg);
     left: 40%;
 }
 
-.dark-theme .scroll_down_arrow{
+.dark-theme .scroll_down_arrow {
     filter: brightness(100);
 }
 
@@ -49,38 +49,38 @@
     .scroll_down_arrow {
         display: inline;
     }
-    
+
 }
 
 /* === tablets fix==== */
 @media only screen and (max-width: 1200px) {
-    .overflowcontainer_home{
-        transform: translate(0%,0%);
-        position:absolute;
-    bottom:0px;
+    .overflowcontainer_home {
+        transform: translate(0%, 0%);
+        position: absolute;
+        bottom: 0px;
     }
 
-    .Modal{
+    .Modal {
         filter: opacity(00);
     }
 
     .scroll_down_arrow {
         display: inline;
         bottom: 5%;
-    } 
+    }
 }
 
 
 
 /* === long phones fix==== */
 @media only screen and (max-width: 700px) {
-    .overflowcontainer_home{
-        transform: translate(-8%,-10%);
-        position:absolute;
-    bottom:0px;
+    .overflowcontainer_home {
+        transform: translate(-8%, -10%);
+        position: absolute;
+        bottom: 0px;
     }
 
-    .Modal{
+    .Modal {
         filter: opacity(00);
     }
 
@@ -93,13 +93,13 @@
 
 /* === small phones fix==== */
 @media only screen and (max-height: 740px) {
-    .overflowcontainer_home{
-        transform: translate(-8%,-30%);
-        position:absolute;
-    bottom:0px;
+    .overflowcontainer_home {
+        transform: translate(-8%, -30%);
+        position: absolute;
+        bottom: 0px;
     }
 
-    .Modal{
+    .Modal {
         filter: opacity(00);
     }
 
@@ -376,8 +376,9 @@
     color: var(--text-color);
     text-align: center;
     text-transform: uppercase;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    /* text-decoration: underline; */
 }
 
 
@@ -514,7 +515,7 @@ c.active {
     scrollbar-width: none;
     /* Firefox */
     padding-bottom: 5%;
-    
+
 }
 
 .overflowcontainer_nonhome_gallery {
@@ -733,6 +734,6 @@ c.active {
     cursor: pointer;
 }
 
-.br{
+.br {
     height: 3px;
 }

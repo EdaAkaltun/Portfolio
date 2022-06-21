@@ -1,0 +1,57 @@
+/* ===== tetxboxes ======== */
+
+* {
+  box-sizing: border-box;
+}
+
+.boxes {
+  margin: auto;
+  padding: 0 20px;
+  width: 90%;
+  display: grid;
+  height: auto;
+  /* Define Auto Row size */
+  /* grid-auto-rows: 100px;  */
+  /*Define our columns */
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+  max-width: 1900px;
+  grid-gap: 1em;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .boxes {
+    display: inline;
+  }
+
+
+  article {
+    padding: 20px;
+  }
+
+}
+
+
+article {
+  border-radius: 10px;
+  /* padding: 20px; */
+  color: var(--text-color);
+
+}
+
+
+
+
+article:nth-child(odd) {
+  width: 30%;
+  text-align: center;
+  transform: translate(115%);
+
+}
+
+article:nth-child(even) {
+  height: fit-content;
+
+
+}

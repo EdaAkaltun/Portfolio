@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <style>
+        body,
+        div,
+        #outerwrapper,
+        #innerwrapper,
+        .cycleitem {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #outerwrapper {
+            position: relative;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        #innerwrapper {
+            width: 310vw;
+            left: -100vw;
+
+        }
+
+        .cycleitem {
+            width: 100vw;
+            float: left;
+            transition: 1s;
+        }
+
+        #innerwrapper .cycleitem:first-child {
+            margin-left: -100vw;
+        }
+
+        .cycleitem img {
+            width: 100%;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#innerwrapper").click(function () {
+                $("#innerwrapper .cycleitem:first-child").animate({
+                    "width": "0"
+                }, 1000, function () {
+                    var content = $("#innerwrapper .cycleitem:first-child").html();
+                    //alert(content);
+                    $("#innerwrapper").append("<div class='cycleitem'>" + content + "</div>");
+                    $("#innerwrapper .cycleitem:first-child").remove();
+                });
+
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="outerwrapper">
+        <div id="innerwrapper">
+            <div class="cycleitem">
+                <img src="images/projecten/Bucky/render_buckyfacade.png">
+            </div>
+            <div class="cycleitem">
+                <img src="images/projecten/Bucky/render_buckyfacade.png">
+            </div>
+            <div class="cycleitem">
+                <img src="images/projecten/Bucky/render_buckyfacade.png">
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</body>
+
+</html>
